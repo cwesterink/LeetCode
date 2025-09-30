@@ -1,27 +1,32 @@
 class Solution:
     def minScoreTriangulation(self, values: List[int]) -> int:
-        n = len(values)
-        # print("polygon", values)
-        if (n < 3):
-            return 0
+        length = len(values)
+
+        def helper(start, end):
+            n = end - start
+
+            if (n < 3):
+                return 0
+
+            if (n == 3):
+                return values[start] * values[start+1] * values[start+2]
+
+            base = values[start] * values[end-1]
+            minScore = -1
+            # print("base",base)
+            for k in range(start+1, end-1):
+                triangleScore = base * values[k]
+                score = helper(k, end) + helper(start, k+1) + triangleScore
+
+                # print("score", score)
+                if score < minScore or minScore == -1:
+                    minScore = score
+
+            return minScore
 
 
-        if (len(values) == 3):
-            return values[0] * values[1] * values[2]
+        return helper(0, length)
 
-        base = values[0] * values[n-1]
-        minScore = -1
-        # print("base",base)
-        for k in range(1, n-1):
-            triangleScore = base * values[k]
-            # print(triangleScore)
-            score = self.minScoreTriangulation(values[k:]) + self.minScoreTriangulation(values[0:k+1]) + triangleScore
-
-            # print("score", score)
-            if score < minScore or minScore == -1:
-                minScore = score
-
-        return minScore
 
 
 
