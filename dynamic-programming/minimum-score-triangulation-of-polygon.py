@@ -1,7 +1,7 @@
 class Solution:
     def minScoreTriangulation(self, values: List[int]) -> int:
         n = len(values)
-        print("polygon", values)
+        # print("polygon", values)
         if (n < 3):
             return 0
 
@@ -11,13 +11,13 @@ class Solution:
 
         base = values[0] * values[n-1]
         minScore = -1
-        print("base",base)
+        # print("base",base)
         for k in range(1, n-1):
             triangleScore = base * values[k]
-            print(triangleScore)
+            # print(triangleScore)
             score = self.minScoreTriangulation(values[k:]) + self.minScoreTriangulation(values[0:k+1]) + triangleScore
 
-            print("score", score)
+            # print("score", score)
             if score < minScore or minScore == -1:
                 minScore = score
 
