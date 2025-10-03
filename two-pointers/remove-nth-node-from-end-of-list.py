@@ -11,7 +11,6 @@ class Solution:
 
             ll = helper(p.next)
             if (ll== n):
-                print(p)
                 p.next = p.next.next
             return 1 + ll
         
