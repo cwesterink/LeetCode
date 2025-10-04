@@ -3,7 +3,7 @@ class Solution:
 
         l = len(nums)
         prev = -1
-        for i in range(l-1, 0, -1):
+        for i in range(l-1, -1, -1):
             cur = nums[i]
             if (prev > cur):
                 nums[i], nums[i+1] = prev, cur
