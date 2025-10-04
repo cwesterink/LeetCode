@@ -14,6 +14,7 @@ class Solution:
             print(res)
             return res
         
-        results = helper(n)
-        return [x for x in results]
+        results = [x for x in helper(n)]
+        results.sort()
+        return results
         
