@@ -7,12 +7,11 @@ class Solution:
 
             bases = helper(pairs-1)
             res = set()
-            print(bases, res)
             for combo in bases:
-                print(combo)
                 res.add("("+ combo + ")")
                 res.add("()" + combo)
                 res.add(combo + "()")
+            print(res)
             return res
         
         results = helper(n)
