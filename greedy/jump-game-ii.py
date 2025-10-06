@@ -10,7 +10,6 @@ class Solution:
                 memoTable[i] = 0
                 return 0
             if i > n-1:
-                memoTable[i] = -1
                 return -1
 
             if memoTable[i] != -1:
