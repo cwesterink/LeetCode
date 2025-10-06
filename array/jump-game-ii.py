@@ -6,15 +6,15 @@ class Solution:
 
 
         def helper(i):
-            if memoTable[i] != -1:
-                return memoTable[i]
-                
             if i == n-1:
                 memoTable[i] = 0
                 return 0
             if i > n-1:
                 memoTable[i] = -1
                 return -1
+
+            if memoTable[i] != -1:
+                return memoTable[i]
 
             maxDist = nums[i]
             if (maxDist == 0):
