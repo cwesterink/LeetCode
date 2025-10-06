@@ -25,6 +25,8 @@ class Solution:
                 if d < bestJump or bestJump == -1:
                     bestJump = d
 
+            if (bestJump == -1):
+                return -1
             return 1 + bestJump
         
         return helper(0)
