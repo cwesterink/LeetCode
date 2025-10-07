@@ -7,9 +7,9 @@ class Solution:
             s -= mx
             mx -= 1
         
-        if (s == 0):
-            return max(nums)+1
         if (mn != 0):
             return 0
+        if (s == 0):
+            return max(nums)+1
         return -s
         
