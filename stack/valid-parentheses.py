@@ -6,6 +6,8 @@ class Solution:
         for c in s:
             if c in openP:
                 queue.append(c)
+            elif len(queue) == 0:
+                return False
             else:
                 o = queue.pop()
                 if (o == "(" and c != ")"):
