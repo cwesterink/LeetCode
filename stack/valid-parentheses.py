@@ -14,6 +14,6 @@ class Solution:
                     return False
                 if (o == "[" and c != "]"):
                     return False
-        return True
+        return len(queue) == 0
 
         
