@@ -18,7 +18,6 @@ class Solution:
         return self.merge(sub1, sub2)
 
     def merge(self, sub1, sub2):
-        print(sub1, sub2)
         res = []
         i, j = 0, 0
 
