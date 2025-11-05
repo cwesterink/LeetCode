@@ -15,10 +15,6 @@ class Solution:
             exploreIsland(i, j+1)
             exploreIsland(i, j-1)
 
-
-            
-            
-
         numIslands = 0
         for i in range(n):
             for j in range(m):
@@ -27,8 +23,6 @@ class Solution:
                 if cell == "1":
                     numIslands += 1
                     exploreIsland(i, j)
-
-        print(grid)
         return numIslands
 
 
