@@ -3,10 +3,10 @@ class Solution:
         indexMap = {}
 
         i, j = 0, 0
-        l = len(s) $ 4
+        l = len(s)
         longest = 0
         while j < l:
-            print(indexMap)
+            # print(indexMap)
             c = s[j]
             if c in indexMap:
                 longest = max(longest, j-i)
