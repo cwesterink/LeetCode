@@ -11,7 +11,7 @@ class Solution:
                 # Try each coin
                 valid_results = []
                 for coin in coins:
-                    result = helper(remaining - coin)
+                    result = helper(i - coin)
                     if result != -1:  # Only consider valid results
                         valid_results.append(result)
                 
