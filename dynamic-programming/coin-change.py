@@ -14,7 +14,8 @@ class Solution:
                     result = helper(i - coin)
                     if result != -1:  # Only consider valid results
                         valid_results.append(result)
-                
+                if len(valid_results) == 0:
+                    return -1
                 memo[i] = 1 + min(valid_results)
             return memo[i]
 
