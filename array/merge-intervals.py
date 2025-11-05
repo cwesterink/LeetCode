@@ -11,7 +11,7 @@ class Solution:
             int1 = intervals[i]
             int2 = intervals[i+1]
             if intervalEnd < int2[0]:
-                mergedIntervals.append([intervalStart, int1[1]])
+                mergedIntervals.append([intervalStart, intervalEnd])
                 intervalStart = int2[0]
             intervalEnd = max(intervalEnd, int2[1])
 
