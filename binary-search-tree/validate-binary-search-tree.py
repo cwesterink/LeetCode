@@ -12,7 +12,7 @@ class Solution:
     def validator(self, root, minVal, maxVal):
         if (root == None):
             return True
-        if (maxVal != None and root.val > maxVal) or (minVal != None and root.val < minVal):
+        if (maxVal != None and root.val >= maxVal) or (minVal != None and root.val <= minVal):
             return False
         
         return self.validator(root.left, minVal, root.val) and self.validator(root.right, root.val, maxVal)
