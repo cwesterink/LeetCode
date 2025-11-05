@@ -6,7 +6,6 @@ class Solution:
         l = len(s)
         longest = 0
         while j < l:
-            print(indexMap, i, j)
             c = s[j]
             if c in indexMap and indexMap[c] >= i:
                 longest = max(longest, j-i)
