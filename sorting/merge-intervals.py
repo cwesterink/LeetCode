@@ -13,7 +13,7 @@ class Solution:
                 intervalStart = int2[0]
 
 
-        mergedIntervals.append([intervalStart, int2[1]])
+        mergedIntervals.append([intervalStart, intervals[-1][1]])
 
         return mergedIntervals
         
