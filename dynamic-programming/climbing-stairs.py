@@ -7,7 +7,7 @@ class Solution:
 
         def helper(i):
             if memo[i] == -1:
-                memo[i] = helper(n-1) + helper(n-2)
+                memo[i] = helper(i-1) + helper(i-2)
             return memo[i]
         
         return helper(n)
