@@ -4,12 +4,12 @@ class Solution:
         n, m  = len(grid), len(grid[0])
 
         def exploreIsland(i, j):
-            if i >= n or j >= m:
+            if i >= n or j >= m or i < 0 or j < 0:
                 return
 
-            if grid[i][j] == '0':
+            if grid[i][j] == "0":
                 return
-            grid[i][j] = '0'
+            grid[i][j] = "0"
             exploreIsland(i+1, j)
             exploreIsland(i-1, j)
             exploreIsland(i, j+1)
@@ -24,7 +24,7 @@ class Solution:
             for j in range(m):
                 cell = grid[i][j]
 
-                if cell == '1':
+                if cell == "1":
                     numIslands += 1
                     exploreIsland(i, j)
 
