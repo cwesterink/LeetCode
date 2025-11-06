@@ -9,7 +9,7 @@ class Solution:
         for i in range(len(intervals)-1):
             int1 = intervals[i]
             int2 = intervals[i+1]
-            if intervalEnd <= int2[0]:
+            if intervalEnd < int2[0]:
                 mergedIntervals.append([intervalStart, intervalEnd])
                 intervalStart = int2[0]
             intervalEnd = max(intervalEnd, int2[1])
