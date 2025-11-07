@@ -2,7 +2,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
 
         i, j = 0, len(nums) - 1
-        while i < j:
+        while i <= j:
             mid = (j+i) // 2
 
             midVal = nums[mid]
