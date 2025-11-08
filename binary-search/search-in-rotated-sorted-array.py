@@ -22,13 +22,14 @@ class Solution:
             print(i, m, j)
             if m +1 < l and nums[m] > nums[m+1]:
                 print("found break")
+                print(m, m+1)
                 break
             if nums[m] < nums[i]:
                 j = m -1
             else:
                 i = m +1
 
-        if target >= nums[l-1]:
+        if target > nums[l-1]:
             # start array
             i, j = 0, m
         else:
