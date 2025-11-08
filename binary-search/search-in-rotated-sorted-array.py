@@ -4,7 +4,7 @@ class Solution:
         l = len(nums)
         i, j = 0, len(nums) - 1
         m = 0
-        while i < j:
+        while i <= j:
 
             m = (i+j) // 2
             print(i, m, j)
