@@ -3,7 +3,19 @@ class Solution:
 
         l = len(nums)
         i, j = 0, len(nums) - 1
+
+        if nums[i] <= nums[j]:
+            while i <= j:
+                m = (i+j) // 2
+                if nums[m] == target:
+                    return m
+                if nums[m] > target:
+                    j = m - 1
+                else:
+                    i = m + 1
+            return -1
         m = 0
+
         while i <= j:
 
             m = (i+j) // 2
