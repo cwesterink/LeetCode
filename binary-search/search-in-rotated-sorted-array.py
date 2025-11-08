@@ -12,9 +12,9 @@ class Solution:
                 print("found break")
                 break
             if nums[m] < nums[i]:
-                j = m
+                j = m -1
             else:
-                i = m
+                i = m +1
 
         if target >= nums[l-1]:
             # start array
