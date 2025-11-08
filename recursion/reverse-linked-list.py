@@ -7,7 +7,6 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
         def helper(node):
-            print(node)
             if node.next == None:
                 return [node, node]
             
@@ -16,7 +15,6 @@ class Solution:
             tail.next = node
             return [h, node]
 
-        print(head)
         if head == None:
             return None
         return helper(head)[0]
