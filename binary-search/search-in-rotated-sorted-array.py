@@ -16,7 +16,7 @@ class Solution:
             else:
                 i = m
 
-        if target > nums[l-1]:
+        if target >= nums[l-1]:
             # start array
             i, j = 0, m
         else:
