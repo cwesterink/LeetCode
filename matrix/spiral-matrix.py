@@ -12,9 +12,6 @@ class Solution:
         rightWall, bottomWall = m-1, n-1
 
         while True:
-            print(i, j)
-            if j >= rightWall:
-                break
             while j < rightWall:
                 res.append(matrix[i][j])
                 j += 1
@@ -39,6 +36,8 @@ class Solution:
                 res.append(matrix[i][j])
                 i -= 1
             leftWall += 1
+            if j >= rightWall:
+                break
         res.append(matrix[i][j])
 
         return res
