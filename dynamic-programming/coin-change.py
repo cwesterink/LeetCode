@@ -1,13 +1,13 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        memo = [-1 for i in range(amount+1)]
+        memo = [None for i in range(amount+1)]
         memo[0] = 0
         def helper(i):
             if i < 0:
                 return -1
             
-            if memo[i] == -1:
+            if memo[i] == None:
                 # Try each coin
                 valid_results = []
                 for coin in coins:
