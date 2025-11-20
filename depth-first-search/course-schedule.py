@@ -29,9 +29,7 @@ class Solution:
             blackSet.add(node)
             return False
 
-        while len(whiteSet) > 0:
-            node = whiteSet.pop()
-            whiteSet.add(node)
+        for node in range(numCourses):
             if checkCycle(node):
                 return False
         return True
