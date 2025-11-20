@@ -20,19 +20,20 @@ class Solution:
             
             whiteSet.remove(node)
             greySet.add(node)
-            if node not in dependencyGraph:
-                return False
-            for n in dependencyGraph[node]:
-                if checkCycle(n):
-                    return True
+            if node in dependencyGraph:
+                for n in dependencyGraph[node]:
+                    if checkCycle(n):
+                        return True
             
             greySet.remove(node)
             blackSet.add(node)
             return False
 
+        print(dependencyGraph)
         while len(whiteSet) > 0:
             node = whiteSet.pop()
             whiteSet.add(node)
+            print(node)
             if checkCycle(node):
                 return False
         return True
