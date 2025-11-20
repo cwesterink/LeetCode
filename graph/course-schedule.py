@@ -29,11 +29,9 @@ class Solution:
             blackSet.add(node)
             return False
 
-        print(dependencyGraph)
         while len(whiteSet) > 0:
             node = whiteSet.pop()
             whiteSet.add(node)
-            print(node)
             if checkCycle(node):
                 return False
         return True
