@@ -4,7 +4,7 @@ class Solution:
         streak = 0
         nums.append(0)
         for val in nums:
-            if val == 0 and streak > 0:
+            if val == 0:
                 if streak > best:
                     best = streak
                 streak = 0
