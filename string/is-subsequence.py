@@ -6,7 +6,6 @@ class Solution:
         m = len(s)
 
         while i < n and j < m:
-            print(s[j], t[i])
             if t[i] == s[j]:
                 j += 1
             i += 1
