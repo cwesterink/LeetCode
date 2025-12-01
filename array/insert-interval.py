@@ -1,7 +1,7 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         if len(intervals) == 0:
-            return [newIntervals]
+            return [newInterval]
 
         res = []
         activeMerge = False
