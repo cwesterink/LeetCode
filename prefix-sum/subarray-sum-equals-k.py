@@ -5,19 +5,20 @@ class Solution:
 
         
         p = 0
-        prefixSums = []
+        prefixMap = {}
         for val in nums:
             p += val
-            prefixSums.append(p)
+            if p not in prefixMap:
+                prefixMap[p] = 0
+            prefixMap[p] += 1
+        
+        while len(prefixMap) > 0:
+            s, count = prefixMap.popitem()
+            if s == k:
+                res += count
+            if (k - s) in prefixMap:
+                countOther = prefixMap.pop(k-s)
+                res += count * countOther
 
-        def sumRange(i, j):
-            if i == 0:
-                return prefixSums[j-1]
-
-            return prefixSums[j-1] - prefixSums[i-1]
-        for i in range(n):
-            for j in range(i+1, n+1):
-                if sumRange(i,j) == k:
-                    res += 1
         return res
         
