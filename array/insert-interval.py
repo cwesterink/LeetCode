@@ -25,6 +25,8 @@ class Solution:
                 else:
                     res.append([l, r])
 
+        if activeMerge:
+            res.append(newInterval)
         return res
 
 
