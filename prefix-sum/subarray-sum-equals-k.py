@@ -4,26 +4,20 @@ class Solution:
         n = len(nums)
 
         
-        p = 0
+        s = 0
         prefixMap = {}
+        prefixMap[0] = 1
         for val in nums:
-            p += val
-            if p not in prefixMap:
-                prefixMap[p] = 0
-            prefixMap[p] += 1
+            s += val
+            l = s-k
+            if l in prefixMap:
+                countOther = prefixMap[l]
+                res += countOther
+
+            if s not in prefixMap:
+                prefixMap[s] = 0
+            prefixMap[s] += 1
         
-        print(prefixMap)
-        while len(prefixMap) > 0:
-            s, count = prefixMap.popitem()
-            
-            a = s-k
-            print(s, count, a)
-            if a == 0:
-                res += count
-            elif a in prefixMap:
-                countOther = prefixMap[a]
-                res += count * countOther
-            
 
         return res
         
