@@ -23,7 +23,6 @@ class Solution:
         mins = 0
         while len(rottenQueue) > 0:
             frontier = []
-            mins += 1
             for i,j in rottenQueue:
                 grid[i][j] = 0
                 if rot(i+1, j):
@@ -34,13 +33,15 @@ class Solution:
                     frontier.append([i, j+1])
                 if rot(i, j-1):
                     frontier.append([i, j-1])
+            if len(frontier) > 0:
+                mins += 1
             rottenQueue = frontier
 
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == 1:
                     return -1
-        return mins -1
+        return mins
             
 
         
