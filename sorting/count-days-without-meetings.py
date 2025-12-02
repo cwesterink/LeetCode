@@ -5,7 +5,7 @@ class Solution:
         meetings.append([days+1, days+1])
         # print(meetings)
         res = 0
-        prev = 1
+        prev = 0
         for start, end in meetings:
             res += max(0, start-prev-1)
             # print(res)
