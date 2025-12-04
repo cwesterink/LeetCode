@@ -16,7 +16,6 @@ class Solution:
             if a == b:
                 return None
             
-            print(a, b)
             val = preorder[x[0]]
             x[0] += 1
             res = TreeNode(val)
