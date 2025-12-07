@@ -8,6 +8,7 @@ class Solution:
         ]
         numRows = len(maze)
         numCols = len(maze[0])
+        maze[entrance[0]][entrance[1]] = '+'
         def isExit(i, j):
             return i == 0 or j == 0 or i == numRows -1 or j == numCols -1
 
@@ -24,6 +25,7 @@ class Solution:
                 row = i + r
                 col = j + c
                 if inBounds(row, col) and maze[row][col] == ".":
+                    maze[row][col] = '+'
                     res.append((row, col))
             return res
 
@@ -34,7 +36,6 @@ class Solution:
                 i, j = queue.popleft()
                 if isExit(i,j) and dist > 0:
                     return dist
-                maze[i][j] = '+'
                 queue.extend(getAdjacentCells(i, j))
             dist += 1
                 
