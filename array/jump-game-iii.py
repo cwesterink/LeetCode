@@ -11,7 +11,7 @@ class Solution:
             return i >= 0 and i < n
         
         queue = deque([start])
-        visited = set()
+        visited = { start }
         
 
         while len(queue) > 0:
@@ -22,12 +22,14 @@ class Solution:
                 if arr[idx] == 0:
                     return True
 
-                visited.add(idx)
+                
                 l, r = idx - val, idx + val
                 if inBounds(l) and l not in visited:
                     queue.append(l)
+                    visited.add(l)
                 if inBounds(r) and r not in visited:
                     queue.append(r)
+                    visited.add(r)
 
         return False
 
