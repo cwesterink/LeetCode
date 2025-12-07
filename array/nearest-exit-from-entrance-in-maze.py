@@ -32,9 +32,7 @@ class Solution:
         while len(queue) > 0:
             for _ in range(len(queue)):
                 i, j = queue.popleft()
-                # print(i,j)
                 if isExit(i,j) and dist > 0:
-                    print(i,j)
                     return dist
                 maze[i][j] = '+'
                 queue.extend(getAdjacentCells(i, j))
