@@ -1,13 +1,13 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-
+        
         n = len(s)
         palindromes = [(i,i) for i in range(n)]
         for i in range(n-1):
             if s[i] == s[i+1]:
                 palindromes.append((i, i+1))
 
-        longest = 0
+        longest = -1
         palindrome = ""
         while palindromes:
             i, j = palindromes.pop()
