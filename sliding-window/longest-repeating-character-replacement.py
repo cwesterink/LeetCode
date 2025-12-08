@@ -11,7 +11,7 @@ class Solution:
                     firstChange = end
                 replacementsUsed += 1
                 if replacementsUsed > k:
-                    print("best is", s[start:end])
+                    # print("best is", s[start:end])
                     longest = max(longest, end-start)
                     replacementsUsed = 0
                     start = end = firstChange
@@ -22,7 +22,7 @@ class Solution:
                 replacementsUsed = 0
                 start = end = firstChange
                 firstChange = -1
-        print(start, end, s[start:end])
+        # print(start, end, s[start:end])
         longest = max(longest, end-start+min(start, k-replacementsUsed))
         return longest
         
