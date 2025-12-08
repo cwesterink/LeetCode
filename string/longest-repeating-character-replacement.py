@@ -16,7 +16,7 @@ class Solution:
                     start = end = firstChange
                     firstChange = -1
             end += 1
-        longest = max(longest, end-start)
+        longest = max(longest, end-start+k-replacementsUsed)
         return longest
         
             
