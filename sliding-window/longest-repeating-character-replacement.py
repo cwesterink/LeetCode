@@ -17,12 +17,6 @@ class Solution:
                     start = end = firstChange
                     firstChange = -1
             end += 1
-            if end >= n and firstChange != -1:
-                longest = max(longest, end-start+min(start, k-replacementsUsed))
-                replacementsUsed = 0
-                start = end = firstChange
-                firstChange = -1
-        # print(start, end, s[start:end])
         longest = max(longest, end-start+min(start, k-replacementsUsed))
         return longest
         
