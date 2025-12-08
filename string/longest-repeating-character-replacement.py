@@ -18,7 +18,7 @@ class Solution:
                     firstChange = -1
             end += 1
             if end >= n and firstChange != -1:
-                longest = max(longest, end-start)
+                longest = max(longest, end-start+min(start, k-replacementsUsed))
                 replacementsUsed = 0
                 start = end = firstChange
                 firstChange = -1
