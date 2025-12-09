@@ -21,6 +21,8 @@ class Solution:
             d, i = heapq.heappop(heap)
             if d < delay[i]:
                 delay[i] = d
+            else:
+                continue
             
             visited.add(i)
             for j, dist in graph[i]:
