@@ -1,5 +1,8 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
+
+        if len(nums) == 1:
+            return nums[0]
         prefixSum = []
         prev = 0
         low= hi = 0
@@ -10,6 +13,9 @@ class Solution:
             if prev > hi:
                 hi = prev
         return hi-low
+
+        -4
+        2
 
         
         
