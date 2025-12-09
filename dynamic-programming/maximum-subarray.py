@@ -5,7 +5,8 @@ class Solution:
             return nums[0]
         prefixSum = []
         prev = 0
-        low= hi = 0
+        low = 0
+        hi =0
         for val in nums:
             prev += val
             if prev < low:
