@@ -8,7 +8,6 @@ class Solution:
 
         for s,d,t in times:
             graph[s].append((d, t))
-        print(graph)
 
         delay = {}
         for i in range(1, n+1):
