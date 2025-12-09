@@ -25,7 +25,7 @@ class Solution:
                 
                 for j, dist in graph[i]:
                     if j not in visited:
-                        visited.add(i)
+                        visited.add(j)
                         heapq.heappush(heap, (d+dist, j))
 
         res = max(delay.values())
